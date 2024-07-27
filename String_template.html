@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>String_template</title>
+        <style>
+            h1{
+                text-align: center;
+                color: blue;
+                font-style: italic;
+                font-size: 80px;
+            }
+        </style>
+        <style>
+            h2{
+                text-align: center;
+                color: blueviolet;
+                font-size: 40px;
+            }
+        </style>
+        <style>
+            button {
+            background-color: #007bff;
+            color: white;
+            }
+        </style>
+    </head>
+    
+    <body>
+
+        <h1>Welcome All !!!</h1>
+        <h2>Simple Calculation Using String_template</h2>
+        <input type="number" id="x" value="10">
+        <input type="number" id="y" value="2">
+        <label id="output"></label>
+        <button type="button" onclick="add()">Add</button>
+        <button type="button" onclick="sub()">Subtract</button>
+        <button type="button" onclick="mul()">Multiply</button>
+        <button type="button" onclick="div()">Divide</button>
+        <button type="button" onclick="circle()">circle</button>
+        
+        <script>
+
+        var x = 10, y = 2;
+
+        function updateVariables() {
+            x = document.getElementById('x').value;
+            y = document.getElementById('y').value;
+        }
+
+        function add() {
+            updateVariables();
+            document.getElementById("output").innerHTML = `Sum of  ${(parseInt(x))} and ${(parseInt(y))} is ${(parseInt(x) + parseInt(y))}`;
+        }
+
+        function sub() {
+            updateVariables();
+            document.getElementById("output").innerHTML = `Subtract of  ${(parseInt(x))} and ${(parseInt(y))} is ${(parseInt(x) - parseInt(y))}`;
+        }
+
+        function mul(){
+            updateVariables();
+            document.getElementById("output").innerHTML = `Multiply of  ${(parseInt(x))} and ${(parseInt(y))} is ${(parseInt(x) * parseInt(y))}`;
+
+        }
+
+        function div(){
+            updateVariables();
+            document.getElementById("output").innerHTML = `Divide of  ${(parseInt(x))} and ${(parseInt(y))} is ${(parseInt(x) / parseInt(y))}`;
+        }
+
+        function circle(){
+            const r=3.14;
+            document.getElementById("output").innerHTML = `Area of Circle for the radius ${(parseInt(x))} is ${(parseInt(x) * parseInt(r))}`;
+        }
+
+        </script>
+    </body>
+</html>
